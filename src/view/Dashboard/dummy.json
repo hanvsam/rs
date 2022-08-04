@@ -1,0 +1,23 @@
+[
+    {
+        "patientPhoto": "./patient.png",
+        "Name": "Hanif Shafwan Mahib",       
+        "Num": "RM 0000314958",
+        "Age": "31 Tahun",
+        "Area": "Poli Telinga"
+    },
+    {
+        "patientPhoto": "./patient.png",
+        "Name": "Mohammad Riyant Almadhi",
+        "Num": "RM 0000314750",
+        "Age": "21 Tahun",
+        "Area": "Poli Gigi"
+    },
+    {
+        "patientPhoto": "./patient.png",
+        "Name": "Mohammad Dafa Dhiyaul Haq",
+        "Num": "RM 0000314682",
+        "Age": "20 Tahun",
+        "Area": "Poli Bedah"
+    }
+]

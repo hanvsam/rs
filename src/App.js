@@ -1,18 +1,16 @@
-import './App.css';
-import Navigation from './components/NavBar'
-import Table from './components/tableList';
-import Entry from './components/mainArea';
-import Kotakpasien from './components/kotakpasien';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import logo from './logo.svg';
+import './App.css'
+import Konsultasi from './view/Konsultasi/index.js'
+import Sidebar from './view/sidebar';
+import Triase from './view/Triase';
+import Pasien from './view/Pasien';
+import Dashboard from './view/Dashboard';
 
 function App() {
   return (
-    <div className="App mb-5">
-      <Navigation/>
-      <Table/> 
-      <Entry/>
-      <Kotakpasien/>
-    </div>
+    <>
+      <Dashboard/>
+    </>
   );
 }
 
