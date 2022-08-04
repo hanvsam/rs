@@ -3,20 +3,32 @@ import Btn from '../component/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card, Form, Button} from "react-bootstrap"
 import "./style.css"
+import Pidentitas from "../Pasien/src/noreg";
 
 
 const Triase = () =>{
     const[datang,setDatang]=useState()
 
-    useEffect(()=>{
-        var dat = document.getElementById('kedatangan')
-        setDatang(dat.value)
-    },[datang]);
 
-    // function pilDat(){
-        
-    // }
+    function pilDat(){
+        var dat = document.getElementsByName("kedatangan")
+        setDatang(dat.value)
+    }
     console.log(datang)
+
+    // const btn = document.querySelector('#btn');        
+    //     const radioButtons = document.querySelectorAll('input[name="kedatangan"]');
+    //     btn.addEventListener("click", () => {
+    //         let selectedSize;
+    //         for (const radioButton of radioButtons) {
+    //             if (radioButton.checked) {
+    //                 selectedSize = radioButton.value;
+    //                 break;
+    //             }
+    //         }
+    //         // show the output:
+    //        console.log(selectedSize)
+    //     });
 
     return(
         <>
@@ -28,10 +40,10 @@ const Triase = () =>{
                             <div>
                                 <span>Kedatangan</span>
                                 <div className="mx-5">
-                                    <input type="radio" id="kedatangan" name="kedatangan" value="Datang Sendiri"/>
-                                    <label for="html">Datang Sendiri</label>
-                                    <input type="radio" id="kedatangan" name="kedatangan" value="Diantar"/>
-                                    <label for="html">Diantar</label>
+                                    <input type="radio" id="Sendiri" name="kedatangan" value="Datang Sendiri"/>
+                                    <label for="Sendiri">Datang Sendiri</label>
+                                    <input type="radio" id="Diantar" name="kedatangan" value="Diantar"/>
+                                    <label for="Diantar">Diantar</label>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +129,7 @@ const Triase = () =>{
 
                         </div>
 
-                        <Button variant="primary">Submit</Button>
+                        <Button variant="primary" onClick={pilDat}>Submit</Button>
                     </Form>
                 </Card.Body>
                 </Card>
