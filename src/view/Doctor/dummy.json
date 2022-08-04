@@ -1,0 +1,32 @@
+[
+    {
+        "id":"0",
+        "Name":"Tony Sudrajat",
+        "Spesialis":"Spesialis Gigi",
+        "Room":"Laboratory"
+    },
+    {
+        "id":"1",
+        "Name":"Sentot Hasto Virdana",
+        "Spesialis":"Spesialis Jantung",
+        "Room":"UGD"
+    },
+    {
+        "id":"2",
+        "Name":"Tony Chopper",
+        "Spesialis":"Dokter Umum",
+        "Room":"Ruang Sakit Umum"
+    },
+    {
+        "id":"3",
+        "Name":"Brian O'Connor",
+        "Spesialis":"Spesialis Alat Kelamin",
+        "Room":"Emergency Room"
+    },
+    {
+        "id":"4",
+        "Name":"Arnold Schwerzenegger",
+        "Spesialis":"Spesialis Tulang dan Otot",
+        "Room":"Fitness Room"
+    }
+]

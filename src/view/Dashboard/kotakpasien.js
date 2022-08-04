@@ -25,7 +25,7 @@ function Kotakpasien() {
     <Container className='mt-3 bg-white rounded-5 p-4 border border-5'>
         <div nameClass="border border-1 rounded-3">
         <Stack gap={3}>
-        {/* {data.map(item=>
+        {data.map(item=>
             <div className="bg-light border border-2 rounded-3">
                 <Row className="m-3">
                     <Col sm={1}>
@@ -45,7 +45,7 @@ function Kotakpasien() {
                 </Row>
             </div>
         
-        )} */}
+        )}
             
            
         </Stack>
