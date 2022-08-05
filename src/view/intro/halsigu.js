@@ -3,6 +3,17 @@ import "./styles/halsigu.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function HalSigU(){
+    
+
+        function log(){
+
+            var username = document.getElementById("Username").value
+            var password = document.getElementById("Password").value
+            var name = document.getElementById("Name").value
+            var email = document.getElementById("Email").value
+            
+        }
+           
     return(
         <body>
             <div style={{backgroundColor:"#fff", padding:30, borderRadius:8}}>

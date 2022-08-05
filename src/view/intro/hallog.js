@@ -30,9 +30,6 @@ function HalLog() {
                     console.log('test')
                     alert('berhaisl')
                 }
-                // else if (username === '' || password === ''){
-                //     alert('harap isi data dengan lengkap')
-                // }
                 else if(username !== item.username && password === item.password){
                     alert('username salah')
                 }
@@ -42,12 +39,10 @@ function HalLog() {
                 else{
                     console.log("gagal")
                 }
-                return 
+                
             })
             }
            
-        
-
 
 
     return(
