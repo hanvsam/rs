@@ -42,6 +42,7 @@ function HalSigU(){
                 <div className="col-12 boxx">
                     <button className="btn btn-warning" type="submit">Daftar</button>
                 </div>
+                <p className="text-center mt-4">Sudah punya akun? Klik<a href="#"> Disini </a></p>
             </form>
             </div>
         </body>

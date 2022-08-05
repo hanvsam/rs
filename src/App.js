@@ -10,7 +10,7 @@ import HalSigU from './intro/halsigu';
 function App() {
   return (
     <div className="App">
-      <HalLog/>
+      <HalSigU/>
     </div>
   );
 }
