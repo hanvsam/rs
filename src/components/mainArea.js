@@ -1,4 +1,3 @@
-import React,{useState,useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,21 +9,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function Entry() {
-    const[data,setData]=useState()
-
-    useEffect(()=>{
-        var dat = require('./dummy.json')
-        var ar = []
-        for (let index = 0; index < dat.length; index++) {
-            const element = dat[index];
-
-            ar.push(element)
-            
-        }
-        setData(ar)
-    },[])
-
-
+    
     return (
         <div>
         <Container className='mt-3 bg-white rounded-5 p-4 border border-3 '>
@@ -60,12 +45,12 @@ function Entry() {
                         </Col>
                         <Col>
                             <h1 style={{fontSize:15}} className="justify-content-start d-flex">Pasien Terdaftar</h1>
-                            <p style={{fontSize:13}} className="justify-content-start d-flex">Orang</p>
+                            <p style={{fontSize:13}} className="justify-content-start d-flex">3 Orang</p>
                         </Col>
                     </Row>
                 </Col>
                 <Col className="p-1">
-                        <Col className="mt-1 p-2 mx-4">
+                        <Col className="mt-1 p-2">
                             Lorem Ipsum
                         </Col>
                 </Col>

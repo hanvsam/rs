@@ -1,5 +1,6 @@
 [
     {
+        "id": "1",
         "patientPhoto": "./patient.png",
         "Name": "Hanif Shafwan Mahib",       
         "Num": "RM 0000314958",
@@ -7,6 +8,7 @@
         "Area": "Poli Telinga"
     },
     {
+        "id": "2",
         "patientPhoto": "./patient.png",
         "Name": "Mohammad Riyant Almadhi",
         "Num": "RM 0000314750",
@@ -14,6 +16,7 @@
         "Area": "Poli Gigi"
     },
     {
+        "id": "3",
         "patientPhoto": "./patient.png",
         "Name": "Mohammad Dafa Dhiyaul Haq",
         "Num": "RM 0000314682",

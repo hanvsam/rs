@@ -1,25 +1,9 @@
-import React,{useState,useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 
 function Table() {
-
-    const[data,setData]=useState([])
-
-    useEffect(()=>{
-        var dat = require('../Doctor/dummy.json')
-        var ar = []
-        for (let index = 0; index < dat.length; index++) {
-            const element = dat[index];
-           
-            ar.push(element)
-        }
-        setData(ar)
-    },[])
-
-
     return (
     <Container className='bg-white rounded-5 p-3 border border-3 shadow mb-5'>
       <Row>
@@ -27,7 +11,7 @@ function Table() {
         <div>
             <Row>
                 <Col xs={6} md={4}>
-                <img src={require('./medical-care.png')} height="70" className='mx-4'/>
+                <img src={require('./medical-care.png')} height="70"/>
                 </Col>
                 <Col xs={12} md={8}>
                     <h1 style={{fontSize:30}} className="justify-content-start d-flex">Kesediaan Obat</h1>
@@ -40,12 +24,11 @@ function Table() {
         <div>
             <Row>
                 <Col xs={6} md={4}>
-                <img src={require('./medical-team.png')} height="70" className='mx-4'/>
+                <img src={require('./medical-team.png')} height="70"/>
                 </Col>
                 <Col xs={12} md={8}>
                     <h1 style={{fontSize:30}} className="justify-content-start d-flex">Doktor Spesialis</h1>
-                    
-                    <p style={{fontSize:20}} className="justify-content-start d-flex">{data.length} Orang</p>
+                    <p style={{fontSize:20}} className="justify-content-start d-flex">21 Orang</p>
                 </Col>
             </Row>
         </div>
@@ -54,7 +37,7 @@ function Table() {
         <div>
             <Row>
                 <Col xs={6} md={4}>
-                <img src={require('./healthcare.png')} height="70" className='mx-4'/>
+                <img src={require('./healthcare.png')} height="70"/>
                 </Col>
                 <Col xs={12} md={8}>
                     <h1 style={{fontSize:30}} className="justify-content-start d-flex">Tenaga Medis</h1>

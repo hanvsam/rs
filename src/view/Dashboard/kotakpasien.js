@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
-import { Outlet, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 
 function Kotakpasien() {
@@ -26,8 +26,8 @@ function Kotakpasien() {
     <Container className='mt-3 bg-white rounded-5 p-4 border border-5'>
         <div nameClass="border border-1 rounded-3">
         <Stack gap={3}>
-        {data.map(item=>
-                <div className="bg-light border border-2 rounded-3">
+        {data.map(item=>(
+            <div key={item.id} className="bg-light border border-2 rounded-3">
                     <Row className="m-3">
                         <Col sm={1}>
                         <img src={require('./patient.png')} height="70" className="justify-content-start d-flex mt-2"/>
@@ -45,8 +45,7 @@ function Kotakpasien() {
                         </Col>
                     </Row>
                 </div>
-            
-        )}
+        ))}
             
            
         </Stack>
