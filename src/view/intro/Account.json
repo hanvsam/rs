@@ -1,0 +1,23 @@
+[
+    {
+        "id":"1",
+        "Name":"Mohammad Dafa Dhiyaul Haq",
+        "username":"dafa",
+        "password":"123456",
+        "email":"dafa@mail.com"
+    },
+    {
+        "id":"2",
+        "Name":"Hanif Shafwan Mahib",
+        "username":"Hanif",
+        "password":"123456",
+        "email":"hanif@mail.com"
+    },
+    {
+        "id":"3",
+        "Name":"Mohammad Riyant Almadhi",
+        "username":"riyan",
+        "password":"ahsiapman",
+        "email":"riyan@mail.com"
+    }
+]

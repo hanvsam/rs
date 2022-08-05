@@ -3,6 +3,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function SignUp() {
+  
   return (
     <div style={{height: "100vh", backgroundColor: "whitesmoke"}}>
       <div className="judul"><h1>JUDUL</h1></div>
