@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect,useState} from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
@@ -6,10 +6,25 @@ import { Form, Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 
 function Doctor(){
+    const[data,setData]=useState()
+
+    useEffect(()=>{
+        var dat = require('./dummy.json')
+        var ar = []
+        for (let index = 0; index < dat.length; index++) {
+            const element = dat[index];
+           
+            ar.push(element)
+        }
+        setData(ar)
+    },[])
+
+    console.log(data)
     return(
         <div>
-        <div nameClass="border">
+        <div className="border">
             <div className="border bg-white shadow">
+          
                 <Row className="m-3 mx-4 p-3">
                     <Col sm={1}>
                     <img src={require('../Doctor/medical-team.png')} height="90" className="justify-content-start d-flex mt-1" />
@@ -32,43 +47,22 @@ function Doctor(){
                 </Row>
             </div>
         </div>
-        <div className='d-flex justify-content-center mt-5 mb-5'>
-            <Row>
+        <div className='d-flex border flex-row row justify-content-center'>
+        {data.map(item=>
                 
-                <Card style={{ width: '20rem', height: '34  rem'}} className="mx-3">
+                <Card style={{ width: '20rem'}} className="mx-3 mt-4">
                 <img src={require('../Doctor/doctor.png')} style={{borderRadius:"50%"}}/>
                 <Card.Body>
-                    <Card.Title>Mamang Racing.SPd.I</Card.Title>
+                    <Card.Title>{item.Name}</Card.Title>
                     <Card.Text>
-                    Kang Jagal Rumah Sakit
+                    {item.Spesialis}
                     </Card.Text>
                     <Button variant="primary">Go somewhere</Button>
                 </Card.Body>
                 </Card>
-                
-                <Card style={{ width: '20rem', height: '34  rem'}} className="mx-3">
-                <img src={require('../Doctor/doctor.png')} style={{borderRadius:"50%"}}/>
-                <Card.Body>
-                    <Card.Title>Mamang Racing.SPd.I</Card.Title>
-                    <Card.Text>
-                    Kang Jagal Rumah Sakit
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-                </Card>
-
-                <Card style={{ width: '20rem', height: '34  rem'}} className="mx-3">
-                <img src={require('../Doctor/doctor.png')} style={{borderRadius:"50%"}}/>
-                <Card.Body>
-                    <Card.Title>Mamang Racing.SPd.I</Card.Title>
-                    <Card.Text>
-                    Kang Jagal Rumah Sakit
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-                </Card>
-                
-            </Row>
+             
+            
+            )}
             </div>
         </div>
     )
