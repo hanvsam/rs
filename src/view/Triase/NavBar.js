@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <>
-      <Navbar collapseOnSelect expand="lg" bg="White" variant="white" className="shadow-sm p-3 mb-4 bg-white">
+      <Navbar collapseOnSelect expand="lg" bg="White" variant="white" className="shadow-sm p-3 mb-4 bg-white fixed-top">
       <Container style={{backgroundColor:"#ffff"}}>
       <Navbar.Brand href="#home">
       <Link to="/Dashboard" style={{textDecoration:"none",color:"#000"}}>

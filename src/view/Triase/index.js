@@ -3,7 +3,7 @@ import Btn from '../component/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Card, Form, Button} from "react-bootstrap"
 import "./style.css"
-import Pidentitas from "../Pasien/src/noreg";
+import { Container, Row, Col } from 'react-grid-system';
 
 
 const Triase = () =>{
@@ -97,72 +97,92 @@ const Triase = () =>{
 
     return(
         <>
-            <div>
-                <Card style={{ width: '70vw', height: '100vh' }} className="bg">
+            <div style={{position:'absolute', left:'50vh', paddingTop:'13vh ', top:'5vh'}}>
+                <Card style={{ width: '70vw', height: '110vh' }} className="bg">
                 <Card.Body>
                     <Form>
                     <div>
-                            <div>
+                            <div className="pb-2">
                                 <span>Kedatangan</span>
-                                <div className="mx-5">
-
-                                    <input type="radio" id="Sendiri" name="kedatangan" value={'sendiri'}/>
-                                    <label >Datang Sendiri</label>
-                                    <input type="radio" id="Diantar" name="kedatangan" value={'diantar'}/>
-                                    <label >Diantar</label>
-                                </div>
+                                <Row className="pt-1">
+                                    <Col sm={3}>
+                                    <input type="radio" id="Sendiri" name="kedatangan" value="Sendiri" className="mx-2"/>
+                                    Datang Sendiri
+                                    </Col>
+                                    <Col sm={3}>
+                                    <input type="radio" id="Diantar" name="kedatangan" value="Sendiri" className="mx-2"/>
+                                    Datang Dengan Orang Lain
+                                    </Col>
+                                </Row>
                             </div>
                         </div>
-                        <div>
-                            <div>
-                                <span>Penyakit menular</span>
-                                <div className="mx-5">
-                                    <input type="radio" id="Ya" name="menular" value={'Ya'}/>
-                                    <label >Ya</label>
-                                    <input type="radio" id="Tidak" name="menular" value={'Tidak'}/>
-                                    <label >Tidak</label>
-
-                                </div>
+                        <div className="pb-2">
+                                <span>Penyakit Menular</span>
+                                <Row  className="pt-1">
+                                    <Col sm={3}>
+                                    <input type="radio" id="Ya" name="menular" value="Ya" className="mx-2"/>
+                                    Iya
+                                    </Col>
+                                    <Col sm={3}>
+                                    <input type="radio" id="Tidak" name="menular" value="Tidak" className="mx-2"/>
+                                    Tidak
+                                    </Col>
+                                </Row>
                             </div>
-                        </div>
 
-                        <div>
+                        <div className="pb-2">
                             <div>
                                 <span>Pengantar</span>
                             </div>
-                            <div>
+                            <div className="pt-2">
                                 <div>
-                                    <span className="mx-5">Ambulan</span>
-                                    <input type="radio" id="AdaAmbulan" name="ambulan" value={"Ada"}/>
-                                    <label >Ada</label>
-                                    <input type="radio" id="TidakAmbulan" name="ambulan" value={"Tidak Ada"}/>
-                                    <label >Tidak</label>
+                                    <Row>
+                                    <span className="mx-5">Mobil Ambulan</span>
+                                    <Col sm={4}>
+                                    <input type="radio" id="AdaAmbulan" name="ambulan" value="Ada" className="mx-2"/>
+                                    Ada
+                                    </Col>
+                                    <Col sm={4}>
+                                    <input type="radio" id="TidakAmbulan" name="ambulan" value="Tidak Ada" className="mx-2"/>
+                                    Tidak
+                                    </Col>
+                                </Row>
                                 </div>
                                 <div>
+                                    <Row>
                                     <span className="mx-5">Petugas Medis</span>
-                                    <input type="radio" id="AdaPetugas" name="petugas" value={"Ada"}/>
-                                    <label >Ada</label>
-                                    <input type="radio" id="TidakPetugas" name="petugas" value={"Tidak"}/>
-                                    <label >Tidak</label>
+                                    <Col sm={4} style={{marginLeft:6}}>
+                                    <input type="radio" id="AdaPetugas" name="kedatangan" value="Ada" className="mx-2"/>
+                                    Ada
+                                    </Col>
+                                    <Col sm={4} style={{marginLeft:0.5}}>
+                                    <input type="radio" id="TidakPetugas" name="kedatangan" value="Tidak" className="mx-2"/>
+                                    Tidak
+                                    </Col>
+                                    </Row>
                                 </div>
                             </div>
                         </div>
                         
                         <div>
-                            <div>
+                            <div className="pb-3">
                                 <span>Trauma/Non Trauma</span>
-                                <div className="mx-5">
-                                    <input type="radio" id="trauma" name="trauma" value={"Trauma"}/>
-                                    <label >Trauma</label>
-                                    <input type="radio" id="Nontrauma" name="trauma" value={"Non Trauma"}/>
-                                    <label >Non Trauma</label>
-                                </div>
+                                <Row className="pt-1">
+                                    <Col sm={3}>
+                                    <input type="radio" id="Trauma" name="trauma" value="Trauma" className="mx-2"/>
+                                    Trauma
+                                    </Col>
+                                    <Col sm={3}>
+                                    <input type="radio" id="Nontrauma" name="trauma" value="Non Trauma" className="mx-2"/>
+                                    Non Trauma
+                                    </Col>
+                                </Row>
                             </div>
                         </div>
 
                         <div style={{width:"100%"}}>
                             <span>Pengkajian</span>
-                            <div style={{width:"100%"}}>
+                            <div className="pt-3" style={{width:"100%"}}>
                                 <Button variant="dark" className="mx-4" style={{height: 40,width:200,borderRadius:20}}>Klik</Button>
                                 <Button variant="danger" className="mx-4 " style={{height: 40,width:200,borderRadius:20}}>Klik</Button>
                                 <Button variant="warning" className="mx-4" style={{height: 40,width:200,borderRadius:20}}>Klik</Button>
@@ -170,11 +190,11 @@ const Triase = () =>{
                             </div>
                         </div>
 
-                        <div>
+                        <div className="py-3">
                             <span>Airway</span>
-                            <div className="d-flex">
+                            <div className="d-flex pt-3">
                                 <div className="klik"><span>Tidak Airway</span></div>
-                                <div className="klik"><span>Obstruksi/ Parsial obstruksi</span></div>
+                                <div className="klik"><span>Obstruksi/Parsial obstruksi</span></div>
                                 <div className="klik"><span>Bebas</span></div>
                                 <div className="klik"><span>Bebas</span></div>
                             </div>
@@ -184,17 +204,18 @@ const Triase = () =>{
 
                         <div>
                             <span>Breathing</span>
-                            <div className="d-flex">
+                            <div className="d-flex pt-3">
                                 <div className="klik"><span>Tidak Breathing</span></div>
-                                <div className="klik"><span>Distress nafas berat/henti nafas</span></div>
-                                <div className="klik"><span>Distress nafas ringan/ sedang</span></div>
+                                <div className="klik text-center"><span>Distress nafas berat/zhenti nafas</span></div>
+                                <div className="klik text-center"><span>Distress nafas ringan/ sedang</span></div>
                                 <div className="klik"><span>Normal</span></div>
                             </div>
                            
 
                         </div>
-
-                        <Button variant="primary" onClick={()=>check()}>Submit</Button>
+                        <div className="pt-3">
+                        <Button variant="primary">Submit</Button>
+                        </div>
                     </Form>
                 </Card.Body>
                 </Card>

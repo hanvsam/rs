@@ -5,27 +5,23 @@ import { FaHome, FaUser, FaChartPie, FaBookMedical } from 'react-icons/fa';
 const Sidebar= ()=>{
     return(
         <>
-        <div className="sidebar">
-            <div style={{width:"100vw",display:"flex", alignItems:"center"}}>
-                <div style={{backgroundColor:"black", width:50, height:50, borderRadius:12}}></div>
-                <span style={{marginLeft:10}}>Tutup</span>
+        <div className="sidebar mt-5">
+            <div style={{display:"flex", alignItems:"center"}} className="justify-content-center">
+                <img src={require('../sidebar/ambulance.png')} height="65"/>
+                <span style={{margin:5, fontSize:17}}>Escort Request</span>
             </div>
             <hr style={{width:'95%'}}/>
-            <div style={{display:"flex",alignItems:"center",marginTop:10}}>
-                <FaHome style={{width:30,height:30,marginTop:20,alignItems:"center"}}/>
-                <span style={{margin:10}}>Home</span>
+            <div style={{display:"flex",alignItems:"center",marginTop:10}} className="mt-3">
+                <img src={require('../sidebar/house.png')} height="50"/>
+                <span style={{margin:15, fontSize:17}}>Home</span>
             </div>
-            <div style={{display:"flex",alignItems:"center",marginTop:10}}>
-                <FaUser style={{width:30,height:30,marginTop:20,alignItems:"center"}}/>
-                <span style={{margin:10}}>Home</span>
+            <div style={{display:"flex",alignItems:"center",marginTop:10}} className="mt-3">
+                <img src={require('../sidebar/user.png')} height="50"/>
+                <span style={{margin:15, fontSize:17}}>Information</span>
             </div>
-            <div style={{display:"flex",alignItems:"center",marginTop:10}}>
-                <FaChartPie style={{width:30,height:30,marginTop:20,alignItems:"center"}}/>
-                <span style={{margin:10}}>Home</span>
-            </div>
-            <div style={{display:"flex",alignItems:"center",marginTop:10}}>
-                <FaBookMedical style={{width:30,height:30,marginTop:20,alignItems:"center"}}/>
-                <span style={{margin:10}}>Home</span>
+            <div style={{display:"flex",alignItems:"center",marginTop:10}} className="mt-4">
+                <img src={require('../sidebar/documents.png')} height="50"/>
+                <span style={{margin:15, fontSize:17}}>Spreadsheet</span>
             </div>
         </div>
 

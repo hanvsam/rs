@@ -7,12 +7,13 @@ import Pasien from './view/Pasien';
 import Dashboard from './view/Dashboard';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Doctor from './view/Doctor/doctor';
+import Jalur from './view/route';
 
 function App() {
   return (
     <>
 
-      <Triase/>
+      <Jalur/>
 
     </>
   );

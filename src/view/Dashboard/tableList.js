@@ -2,6 +2,7 @@ import React,{useState,useEffect} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Link } from 'react-router-dom';
 
 
 function Table() {
@@ -38,6 +39,7 @@ function Table() {
         </Col>
         <Col className="square border border-1 rounded-3" style={{margin:10,padding:20}}>
         <div>
+        <Link to="/Doctor" style={{textDecoration:"none",color:"#000"}}>
             <Row>
                 <Col xs={6} md={4}>
                 <img src={require('./medical-team.png')} height="70" className='mx-4'/>
@@ -48,6 +50,7 @@ function Table() {
                     <p style={{fontSize:20}} className="justify-content-start d-flex">{data.length} Orang</p>
                 </Col>
             </Row>
+        </Link>
         </div>
         </Col>
         <Col className="square border border-1 rounded-3" style={{margin:10,padding:20}}>

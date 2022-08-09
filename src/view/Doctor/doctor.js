@@ -6,7 +6,7 @@ import { Form, Button } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
 
 function Doctor(){
-    const[data,setData]=useState()
+    const[data,setData]=useState([])
 
     useEffect(()=>{
         var dat = require('./dummy.json')

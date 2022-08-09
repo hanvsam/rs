@@ -3,11 +3,19 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
-import { Redirect } from "react-router-dom";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link
+  } from "react-router-dom";
+
+  import Triase from '../Triase';
+
 
 
 function Kotakpasien() {
-    const[data,setData]=useState()
+    const[data,setData]=useState([])
 
     useEffect(()=>{
         var dat = require('./dummy.json')
@@ -28,7 +36,8 @@ function Kotakpasien() {
         <Stack gap={3}>
         {data.map(item=>(
             <div key={item.id} className="bg-light border border-2 rounded-3">
-                    <Row className="m-3">
+                <Link to="/Triase" style={{textDecoration:"none",color:"#000"}}>
+                <Row className="m-3" >
                         <Col sm={1}>
                         <img src={require('./patient.png')} height="70" className="justify-content-start d-flex mt-2"/>
                         </Col>
@@ -44,12 +53,18 @@ function Kotakpasien() {
                         <img src={require('./verified-user.png')} height="50" className=" mt-3 "/>
                         </Col>
                     </Row>
+
+                </Link>
+                    
                 </div>
         ))}
             
            
         </Stack>
         </div>
+            <Routes>
+                <Route path="/Triase" element={<Triase/>}/>
+            </Routes>
     </Container>
     );
   }
