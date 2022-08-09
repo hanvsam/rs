@@ -6,8 +6,11 @@ import "./style.css"
 import { Container, Row, Col } from 'react-grid-system';
 
 
+
+
+
 const Triase = () =>{
-    const[form,setForm]=useState()
+    const[form,setForm]=useState([])
     const[datang,setDatang]=useState()
     const[menular,setMenular]=useState()
     const[ambulan,setAmbulan]=useState()
@@ -66,7 +69,7 @@ const Triase = () =>{
     }
 
     function checkTrauma(){
-        var ya = document.getElementById('trauma')
+        var ya = document.getElementById('Trauma')
         var no = document.getElementById('Nontrauma')
 
         if (ya.checked === true){
@@ -95,10 +98,12 @@ const Triase = () =>{
 
     console.log('test',form)
 
+   
+
     return(
         <>
-            <div style={{position:'absolute', left:'50vh', paddingTop:'13vh ', top:'5vh'}}>
-                <Card style={{ width: '70vw', height: '110vh' }} className="bg">
+            <div style={{position:'absolute', left:'50vh', paddingTop:'13vh ', top:'5vh', height:'100vh'}}>
+                <Card style={{ width: '70vw', height: '100rem' }} className="bg">
                 <Card.Body>
                     <Form>
                     <div>
@@ -106,11 +111,11 @@ const Triase = () =>{
                                 <span>Kedatangan</span>
                                 <Row className="pt-1">
                                     <Col sm={3}>
-                                    <input type="radio" id="Sendiri" name="kedatangan" value="Sendiri" className="mx-2"/>
+                                    <input type="radio" id="Sendiri" name="kedatangan" value={"Sendiri"} className="mx-2"/>
                                     Datang Sendiri
                                     </Col>
                                     <Col sm={3}>
-                                    <input type="radio" id="Diantar" name="kedatangan" value="Sendiri" className="mx-2"/>
+                                    <input type="radio" id="Diantar" name="kedatangan" value={"Dengan Orang lain"} className="mx-2"/>
                                     Datang Dengan Orang Lain
                                     </Col>
                                 </Row>
@@ -120,11 +125,11 @@ const Triase = () =>{
                                 <span>Penyakit Menular</span>
                                 <Row  className="pt-1">
                                     <Col sm={3}>
-                                    <input type="radio" id="Ya" name="menular" value="Ya" className="mx-2"/>
+                                    <input type="radio" id="Ya" name="menular" value={"Ya"} className="mx-2"/>
                                     Iya
                                     </Col>
                                     <Col sm={3}>
-                                    <input type="radio" id="Tidak" name="menular" value="Tidak" className="mx-2"/>
+                                    <input type="radio" id="Tidak" name="menular" value={"Tidak"} className="mx-2"/>
                                     Tidak
                                     </Col>
                                 </Row>
@@ -139,11 +144,11 @@ const Triase = () =>{
                                     <Row>
                                     <span className="mx-5">Mobil Ambulan</span>
                                     <Col sm={4}>
-                                    <input type="radio" id="AdaAmbulan" name="ambulan" value="Ada" className="mx-2"/>
+                                    <input type="radio" id="AdaAmbulan" name="ambulan" value={"Ada"} className="mx-2"/>
                                     Ada
                                     </Col>
                                     <Col sm={4}>
-                                    <input type="radio" id="TidakAmbulan" name="ambulan" value="Tidak Ada" className="mx-2"/>
+                                    <input type="radio" id="TidakAmbulan" name="ambulan" value={"Tidak Ada"} className="mx-2"/>
                                     Tidak
                                     </Col>
                                 </Row>
@@ -152,11 +157,11 @@ const Triase = () =>{
                                     <Row>
                                     <span className="mx-5">Petugas Medis</span>
                                     <Col sm={4} style={{marginLeft:6}}>
-                                    <input type="radio" id="AdaPetugas" name="kedatangan" value="Ada" className="mx-2"/>
+                                    <input type="radio" id="AdaPetugas" name="petugas" value={"Ada"} className="mx-2"/>
                                     Ada
                                     </Col>
                                     <Col sm={4} style={{marginLeft:0.5}}>
-                                    <input type="radio" id="TidakPetugas" name="kedatangan" value="Tidak" className="mx-2"/>
+                                    <input type="radio" id="TidakPetugas" name="petugas" value={"Tidak"} className="mx-2"/>
                                     Tidak
                                     </Col>
                                     </Row>
@@ -169,11 +174,11 @@ const Triase = () =>{
                                 <span>Trauma/Non Trauma</span>
                                 <Row className="pt-1">
                                     <Col sm={3}>
-                                    <input type="radio" id="Trauma" name="trauma" value="Trauma" className="mx-2"/>
+                                    <input type="radio" id="Trauma" name="trauma" value={"Trauma"} className="mx-2"/>
                                     Trauma
                                     </Col>
                                     <Col sm={3}>
-                                    <input type="radio" id="Nontrauma" name="trauma" value="Non Trauma" className="mx-2"/>
+                                    <input type="radio" id="Nontrauma" name="trauma" value={"Non Trauma"} className="mx-2"/>
                                     Non Trauma
                                     </Col>
                                 </Row>
@@ -214,7 +219,7 @@ const Triase = () =>{
 
                         </div>
                         <div className="pt-3">
-                        <Button variant="primary">Submit</Button>
+                        <Button variant="primary" onClick={()=>check()}>Submit</Button>
                         </div>
                     </Form>
                 </Card.Body>
