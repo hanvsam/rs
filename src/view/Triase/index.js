@@ -7,28 +7,93 @@ import Pidentitas from "../Pasien/src/noreg";
 
 
 const Triase = () =>{
+    const[form,setForm]=useState()
     const[datang,setDatang]=useState()
+    const[menular,setMenular]=useState()
+    const[ambulan,setAmbulan]=useState()
+    const[petugas,setPetugas]=useState()
+    const[trauma,setTrauma]=useState()
 
 
-    function pilDat(){
-        var dat = document.getElementsByName("kedatangan")
-        setDatang(dat.value)
+    function checkKedatangan(){
+        var sendiri = document.getElementById('Sendiri')
+        var antar = document.getElementById('Diantar')
+        if (sendiri.checked === true){
+            setDatang(sendiri.value)
+        }
+        else if (antar.checked === true){
+            setDatang(antar.value)
+        }
+        else{
+            console.log('dasd')
+        }
     }
-    console.log(datang)
 
-    // const btn = document.querySelector('#btn');        
-    //     const radioButtons = document.querySelectorAll('input[name="kedatangan"]');
-    //     btn.addEventListener("click", () => {
-    //         let selectedSize;
-    //         for (const radioButton of radioButtons) {
-    //             if (radioButton.checked) {
-    //                 selectedSize = radioButton.value;
-    //                 break;
-    //             }
-    //         }
-    //         // show the output:
-    //        console.log(selectedSize)
-    //     });
+    function checkMenular(){
+        var agree = document.getElementById('Ya')
+        var Dagree = document.getElementById('Tidak')
+
+        if (agree.checked === true){
+            setMenular(agree.value)
+        }
+        else if (Dagree === true){
+            setMenular(Dagree.value)
+        }
+    }
+
+    function checkAmbulan(){
+        var ya = document.getElementById('AdaAmbulan')
+        var no = document.getElementById('TidakAmbulan')
+
+        if (ya.checked === true){
+            setAmbulan(ya.value)
+        }
+        else if (no.checked === true){
+            setAmbulan(no.value)
+        }
+    }
+
+    function checkPetugas(){
+        var ya = document.getElementById('AdaPetugas')
+        var no = document.getElementById('TidakPetugas')
+
+        if (ya.checked === true){
+            setPetugas(ya.value)
+        }
+        else if (no.checked === true){
+            setPetugas(no.value)
+        }
+    }
+
+    function checkTrauma(){
+        var ya = document.getElementById('trauma')
+        var no = document.getElementById('Nontrauma')
+
+        if (ya.checked === true){
+            setTrauma(ya.value)
+        }
+        else if (no.checked === true){
+            setTrauma(no.value)
+        }
+    }
+
+    function check(){
+        const arr = {
+            "Datang":datang,
+            "Menular":menular,
+            "Ambulan":ambulan,
+            "Petugas":petugas,
+            "Trauma":trauma
+        }
+        checkKedatangan()
+        checkAmbulan()
+        checkMenular()
+        checkPetugas()
+        checkTrauma()
+        setForm(arr)
+    }
+
+    console.log('test',form)
 
     return(
         <>
@@ -40,26 +105,26 @@ const Triase = () =>{
                             <div>
                                 <span>Kedatangan</span>
                                 <div className="mx-5">
-                                    <input type="radio" id="Sendiri" name="kedatangan" value="Datang Sendiri"/>
-                                    <label for="Sendiri">Datang Sendiri</label>
-                                    <input type="radio" id="Diantar" name="kedatangan" value="Diantar"/>
-                                    <label for="Diantar">Diantar</label>
+
+                                    <input type="radio" id="Sendiri" name="kedatangan" value={'sendiri'}/>
+                                    <label >Datang Sendiri</label>
+                                    <input type="radio" id="Diantar" name="kedatangan" value={'diantar'}/>
+                                    <label >Diantar</label>
                                 </div>
                             </div>
                         </div>
-                        <Form.Group>
-                            <Form.Label>Penyakit menular</Form.Label>
-                            {['Iya', 'Tidak'].map(lab=>(
-                                <Form.Check
-                                reverse
-                                label={lab}
-                                name="menular"
-                                type='radio'
-                                id='radioMenular'
-                                className="mx-5"
-                                />
-                            ))}
-                        </Form.Group>
+                        <div>
+                            <div>
+                                <span>Penyakit menular</span>
+                                <div className="mx-5">
+                                    <input type="radio" id="Ya" name="menular" value={'Ya'}/>
+                                    <label >Ya</label>
+                                    <input type="radio" id="Tidak" name="menular" value={'Tidak'}/>
+                                    <label >Tidak</label>
+
+                                </div>
+                            </div>
+                        </div>
 
                         <div>
                             <div>
@@ -68,17 +133,17 @@ const Triase = () =>{
                             <div>
                                 <div>
                                     <span className="mx-5">Ambulan</span>
-                                    <input type="radio" id="ambulan" name="ambulan" value="Ada"/>
-                                    <label for="html">Ada</label>
-                                    <input type="radio" id="ambulan" name="ambulan" value="Tidak"/>
-                                    <label for="html">Tidak</label>
+                                    <input type="radio" id="AdaAmbulan" name="ambulan" value={"Ada"}/>
+                                    <label >Ada</label>
+                                    <input type="radio" id="TidakAmbulan" name="ambulan" value={"Tidak Ada"}/>
+                                    <label >Tidak</label>
                                 </div>
                                 <div>
                                     <span className="mx-5">Petugas Medis</span>
-                                    <input type="radio" id="petugas" name="petugas" value="Ada"/>
-                                    <label for="html">Ada</label>
-                                    <input type="radio" id="petugas" name="petugas" value="Tidak"/>
-                                    <label for="html">Tidak</label>
+                                    <input type="radio" id="AdaPetugas" name="petugas" value={"Ada"}/>
+                                    <label >Ada</label>
+                                    <input type="radio" id="TidakPetugas" name="petugas" value={"Tidak"}/>
+                                    <label >Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -87,10 +152,10 @@ const Triase = () =>{
                             <div>
                                 <span>Trauma/Non Trauma</span>
                                 <div className="mx-5">
-                                    <input type="radio" id="trauma" name="trauma" value="Trauma"/>
-                                    <label for="html">Trauma</label>
-                                    <input type="radio" id="trauma" name="trauma" value="Non Trauma"/>
-                                    <label for="html">Non Trauma</label>
+                                    <input type="radio" id="trauma" name="trauma" value={"Trauma"}/>
+                                    <label >Trauma</label>
+                                    <input type="radio" id="Nontrauma" name="trauma" value={"Non Trauma"}/>
+                                    <label >Non Trauma</label>
                                 </div>
                             </div>
                         </div>
@@ -129,7 +194,7 @@ const Triase = () =>{
 
                         </div>
 
-                        <Button variant="primary" onClick={pilDat}>Submit</Button>
+                        <Button variant="primary" onClick={()=>check()}>Submit</Button>
                     </Form>
                 </Card.Body>
                 </Card>

@@ -11,7 +11,9 @@ import Doctor from './view/Doctor/doctor';
 function App() {
   return (
     <>
-     <Dashboard/>
+
+      <Triase/>
+
     </>
   );
 }

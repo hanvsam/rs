@@ -1,8 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-
-import {FaPen} from 'react-icons/fa';
 import "../style.css";
 
 
