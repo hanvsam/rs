@@ -6,7 +6,6 @@ import NavBar from "./NavBar";
 function PDocter(){
     return(
         <>
-            <NavBar/>
             <Doctor/>
         </>
         

@@ -30,7 +30,7 @@ function Doctor(){
                     <img src={require('../Doctor/medical-team.png')} height="90" className="justify-content-start d-flex mt-1" />
                     </Col>
                     <Col className="jus mt-2">
-                        <h3 className="justify-content-start d-flex">Rumah Sakit Dr Darsono Pacitan</h3>
+                        <h3 className="justify-content-start d-flex">Rumah Sakit X</h3>
                         <p className="justify-content-start d-flex" style={{fontSize:20}}>Daftar Dokter Tersedia</p>
                     </Col>
                     <Col>

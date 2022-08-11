@@ -80,6 +80,27 @@ const Triase = () =>{
         }
     }
 
+    // var header = document.getElementById("Airway");
+    var btn = document.getElementsByClassName("klik");
+    for (let index = 0; index < btn.length; index++) {
+        btn[index].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active","");
+            this.className += " active"
+        })
+    }
+    function checkKajian(){
+        const tidakAirway = document.getElementById("tidakAirway")
+        const parsial = document.getElementById("parsialObstruksi")
+        const bebas = document.getElementById("Bebas")
+
+        if (tidakAirway){
+            console.log(tidakAirway.value)
+        }
+
+    }
+
+
     function check(){
         const arr = {
             "Datang":datang,
@@ -88,6 +109,8 @@ const Triase = () =>{
             "Petugas":petugas,
             "Trauma":trauma
         }
+       
+
         checkKedatangan()
         checkAmbulan()
         checkMenular()
@@ -187,21 +210,21 @@ const Triase = () =>{
 
                         <div style={{width:"100%"}}>
                             <span>Pengkajian</span>
-                            <div className="pt-3" style={{width:"100%"}}>
-                                <Button variant="dark" className="mx-4" style={{height: 40,width:200,borderRadius:20}}>Klik</Button>
-                                <Button variant="danger" className="mx-4 " style={{height: 40,width:200,borderRadius:20}}>Klik</Button>
-                                <Button variant="warning" className="mx-4" style={{height: 40,width:200,borderRadius:20}}>Klik</Button>
-                                <Button variant="success" className="mx-4" style={{height: 40,width:200,borderRadius:20}}>Klik</Button>
+                            <div className="pt-3" style={{width:"100%"}} id="kajian">
+                                <Button variant="dark" className="mx-4 ac" style={{height: 40,width:200,borderRadius:20}} id="hitam" name="Pengkajian" value="hitam">Hitam</Button>
+                                <Button variant="danger" className="mx-4 ac" style={{height: 40,width:200,borderRadius:20}} id="merah" name="Pengkajian" value="merah">Merah</Button>
+                                <Button variant="warning" className="mx-4 ac" style={{height: 40,width:200,borderRadius:20}} id="kuning" name="Pengkajian" value="kuning">Kuning</Button>
+                                <Button variant="success" className="mx-4 ac" style={{height: 40,width:200,borderRadius:20}} id="hijau" name="Pengkajian" value="hijau">Hijau</Button>
                             </div>
                         </div>
 
                         <div className="py-3">
                             <span>Airway</span>
-                            <div className="d-flex pt-3">
-                                <div className="klik"><span>Tidak Airway</span></div>
-                                <div className="klik"><span>Obstruksi/Parsial obstruksi</span></div>
-                                <div className="klik"><span>Bebas</span></div>
-                                <div className="klik"><span>Bebas</span></div>
+                            <div className="d-flex pt-3" id="Airway">
+                                <Button variant ="success" className="klik" id="tidakAirway" name="udara" value="Tidak Airway"><span>Tidak Airway</span></Button>
+                                <Button variant ="success" className="klik" id="parsialObstruksi" name="udara" value="Tidak Airway"><span>Obstruksi/Parsial obstruksi</span></Button>
+                                <Button variant ="success" className="klik" id="Bebas" name="udara" value="Tidak Airway"><span>Bebas</span></Button>
+                                <Button variant ="success" className="klik" style={{opacity:0}}><span>Bebas</span></Button>
                             </div>
                            
 
@@ -210,10 +233,10 @@ const Triase = () =>{
                         <div>
                             <span>Breathing</span>
                             <div className="d-flex pt-3">
-                                <div className="klik"><span>Tidak Breathing</span></div>
-                                <div className="klik text-center"><span>Distress nafas berat/zhenti nafas</span></div>
-                                <div className="klik text-center"><span>Distress nafas ringan/ sedang</span></div>
-                                <div className="klik"><span>Normal</span></div>
+                                <Button className="klik"><span>Tidak Breathing</span></Button>
+                                <Button className="klik text-center"><span>Distress nafas berat/berhenti nafas</span></Button>
+                                <Button className="klik text-center"><span>Distress nafas ringan/ sedang</span></Button>
+                                <Button className="klik"><span>Normal</span></Button>
                             </div>
                            
 
